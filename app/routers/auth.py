@@ -120,7 +120,7 @@ def forgot_password(
         db.auth.reset_password_for_email(
             body.email,
             options={
-                "redirect_to": "http://github.com/yash-09-code/reset-password/index.html"
+                "redirect_to": "http://yash-09-code.github.io/backend"
             }
         )
     except Exception as exc:
