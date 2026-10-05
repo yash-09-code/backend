@@ -130,11 +130,11 @@ def forgot_password(
         "message": "Password reset email sent"
     }
 
-@router.post("/otp-verify")
-def otp_verify(db: Client = Depends(public_supabase), user=Depends(current_user)):
-    """Verify the user's email using OTP. The user must be logged in and have a valid session."""
-    try:
-        db.auth.verify_otp()
-    except Exception as exc:
-        raise_supabase_error(exc)
-    return {"message": "OTP verified successfully"}
+# @router.post("/otp-verify")
+# def otp_verify(db: Client = Depends(public_supabase), user=Depends(current_user)):
+#     """Verify the user's email using OTP. The user must be logged in and have a valid session."""
+#     try:
+#         db.auth.verify_otp()
+#     except Exception as exc:
+#         raise_supabase_error(exc)
+#     return {"message": "OTP verified successfully"}
